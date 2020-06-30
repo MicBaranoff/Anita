@@ -78,6 +78,7 @@ $(document).ready(function(){
     $('#burger').click(function(){
       $(this).toggleClass('open');
       $('header .holder').toggleClass('active');
+      $('body').toggleClass('of');
     });
 });
 },{}]},{},[1]);

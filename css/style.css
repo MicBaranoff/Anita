@@ -126,7 +126,7 @@ main {
 }
 html,
 body {
-  overflow-x: hidden!important;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -137,6 +137,9 @@ body {
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+}
+body.of {
+  overflow: hidden!important;
 }
 body.vis {
   opacity: 1;
@@ -789,7 +792,7 @@ section.mainbanner .holder .left .img {
 }
 section.mainbanner .holder .left .img img {
   width: 100%;
-  animation: heartbeat linear 1s alternate-reverse infinite;
+  animation: heartbeat linear 1s 4 alternate-reverse;
 }
 section.mainbanner .holder .left p {
   font-family: Corinthia;
@@ -832,11 +835,7 @@ section.mainbanner .holder .right form .btnbox img {
   position: absolute;
   top: -10px;
   right: -10px;
-  -webkit-animation-name: shake;
-  -webkit-animation-duration: 0.8s;
-  -webkit-transform-origin: 50% 50%;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  animation: heartbeat linear 1s alternate-reverse infinite;
 }
 section.about {
   width: 100%;
@@ -1557,7 +1556,10 @@ footer .holder > span {
 }
 @media screen and (max-width: 1240px) {
   section.courses .holder .coursesbox .courses-slider {
-    width: 90%;
+    width: 85%;
+  }
+  section.partners .holder .partnersbox .partners-slider {
+    width: 85%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1593,7 +1595,7 @@ footer .holder > span {
   }
   header .holder {
     z-index: 998;
-    position: absolute;
+    position: fixed;
     padding: 30px 10px ;
     padding-top: 70px;
     top: 0;
@@ -1642,6 +1644,13 @@ footer .holder > span {
   }
 }
 @media screen and (max-width: 768px) {
+  .title h2 {
+    font-size: 30px;
+  }
+  .title span {
+    font-size: 50px;
+    margin-bottom: -40px;
+  }
   section.mainbanner {
     height: auto;
     padding-bottom: 50px;
@@ -1700,8 +1709,93 @@ footer .holder > span {
   section.blog .holder .bloglist .item:nth-child(even) {
     margin-top: 0;
   }
+  section.contacts {
+    padding-bottom: 50px;
+  }
+  section.contacts .holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.contacts .holder .right {
+    margin-bottom: 50px;
+  }
+  footer .holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .holder > span {
+    text-align: center;
+    font-size: 10px;
+  }
+  footer .holder a.logo {
+    margin-bottom: 20px;
+  }
+  footer .holder ul {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 320px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .holder ul li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 @media screen and (max-width: 425px) {
+  section.contacts {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+  section.mainbanner .holder .left h1 {
+    font-size: 34px;
+  }
+  section.services {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  section.partners {
+    padding-top: 30px;
+  }
+  section.about .holder {
+    padding-bottom: 30px;
+  }
+  section.about .holder .right .text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.about .holder .right .text h3 {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin-bottom: 0;
+  }
+  section.about .holder .right .text .img {
+    margin-bottom: 20px;
+  }
+  section.about .holder .right .text .box p {
+    max-width: none;
+  }
   section.blog .holder .bloglist .item {
     margin-bottom: 30px;
     width: 100%;
