@@ -12,21 +12,13 @@ $(document).ready(function(){
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 425,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -52,8 +44,6 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                infinite: true,
-                dots: true
               }
             },
             {
@@ -83,6 +73,11 @@ $(document).ready(function(){
       $('.servnav span').removeClass('active');
       $('.servbox .servlist').eq($(this).index()).fadeIn(700);
       $(this).addClass('active');
+    });
+
+    $('#burger').click(function(){
+      $(this).toggleClass('open');
+      $('header .holder').toggleClass('active');
     });
 });
 },{}]},{},[1]);

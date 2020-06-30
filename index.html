@@ -10,7 +10,8 @@
 </head>
 <body>
    
-  <header>
+  <header> 
+    <a href="" class="logo">AnitaShatz</a>
     <div class="holder">
       <a href="" class="logo">AnitaShatz</a>
       <nav>
@@ -29,6 +30,12 @@
         <span>Укр</span> /
         <span>Eng</span>
       </div>
+    </div>
+
+    <div id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
@@ -556,7 +563,7 @@
     }, 5500);
 
     $('section.mainbanner').mousemove(function (e) {
-        if(perm == true){
+        if(perm == true && $(window).width() > 1024){
           h1(e, document.getElementById('h1'), 1);
         h2(e, document.getElementById('h2'), 1);
         h3(e, document.getElementById('h3'), 1);
